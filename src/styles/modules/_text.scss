@@ -1,0 +1,5 @@
+@use 'variables';
+
+.texto-apagado{
+    color: variables.$corTextoApagado;
+}

@@ -1,0 +1,26 @@
+@use 'variables';
+
+.button{
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: variables.$corButton;
+    color: variables.$corTexto;
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease .3s;
+
+    &:hover{
+        background-color: lighten(variables.$corButton, 10%);
+    }
+
+    &-hero{
+        opacity: .8;
+    }
+}

@@ -1,0 +1,37 @@
+@use '../modules/variables';
+
+#introducao{
+    padding-top: 40px;
+    color: variables.$corTexto;
+    
+    .container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+
+        .text-container{
+            text-align: right;
+            
+            &::first-letter{
+                font-size: 1em;
+            }
+
+            p{
+                line-height: 1.3em;
+                letter-spacing: 1px;
+            }
+
+            .button{
+                font-size: 1em;
+                padding: 10px;
+                margin-top: 10px;
+                width: 230px;
+
+                &:hover{
+                    background: red;
+                }
+            }
+        }
+    }
+}
