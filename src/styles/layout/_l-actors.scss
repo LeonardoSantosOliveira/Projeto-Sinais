@@ -1,0 +1,56 @@
+@use '../modules/variables';
+
+#actors{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('../../../dist/images/detalhes-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    .section-title{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .actors-list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding-top: 30px;
+        padding: 10px;
+
+        &-image{
+            max-width: 120px;
+            width: 100%;
+            filter: grayscale(1);
+            transition: filter ease .2s;
+
+            &:hover{
+                filter: grayscale(0);
+            }
+        }
+
+        &-item{
+            list-style-type: none;
+            width: 100%;
+            max-width: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            &-name{
+                padding-top: 10px;
+                color: variables.$corTexto;
+            }
+
+            &-subtitle{
+                color: variables.$corTextoApagado;
+                padding-top: 5px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

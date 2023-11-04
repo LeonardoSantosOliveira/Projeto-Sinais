@@ -2,7 +2,7 @@
 
 #detalhes{
     padding-top: 30px;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, 0.8)), url('../../../dist/images/sinais-hero-desktop.jpg');
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.9)), url('../../../dist/images/sinais-hero-desktop.jpg');
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: cover;
@@ -45,7 +45,19 @@
             text-align: right;
 
             li{
-                list-style: none;
+                list-style: none;font-size: px;
+                }
+
+                &:nth-child(2),
+                &:nth-child(3){
+                    border-top: 1px solid variables.$corTextoApagado;
+                    margin-top: 8px;
+                    padding-top: 8px;
+                }
+
+                & .texto-apagado{
+                    padding-left: 5px;
+                }
             }
         }
 
@@ -53,4 +65,3 @@
             height: 300px;
         }
     }
-}

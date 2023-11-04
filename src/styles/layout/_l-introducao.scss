@@ -2,6 +2,7 @@
 
 #introducao{
     padding-top: 40px;
+    padding-bottom: 40px;
     color: variables.$corTexto;
     
     .container{
@@ -11,27 +12,39 @@
         gap: 20px;
 
         .text-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
             text-align: right;
+            max-height: 315px;
+            height: 100%;
+            max-width: 50%;
+            width: 100%;
             
             &::first-letter{
                 font-size: 1em;
             }
 
             p{
-                line-height: 1.3em;
                 letter-spacing: 1px;
             }
 
             .button{
+                margin-top: 10px;
                 font-size: 1em;
                 padding: 10px;
-                margin-top: 10px;
                 width: 230px;
 
                 &:hover{
                     background: red;
                 }
             }
+        }
+
+        .trailer-container{
+            max-width: 50%;
+            width: 100%;
         }
     }
 }

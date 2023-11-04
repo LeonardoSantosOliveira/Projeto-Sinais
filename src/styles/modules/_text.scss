@@ -3,3 +3,12 @@
 .texto-apagado{
     color: variables.$corTextoApagado;
 }
+
+.section-title{
+    font-family: 'Montserrat', sans-serif;
+    color: variables.$corTexto;
+    font-weight: 200;
+    letter-spacing: 2px;
+    font-size: 3em;
+    text-transform: uppercase;
+}
