@@ -1,4 +1,5 @@
 @use '../modules/variables';
+@use '../modules/breakpoints';
 
 #detalhes{
     padding-top: 30px;
@@ -10,15 +11,17 @@
     color: variables.$corTexto;
     padding-bottom: 50px;
 
+    @include breakpoints.tablet{
+        padding: 40px;
+    }
+
     .border{
         border-top: 5px solid variables.$corTextoApagado;
         opacity: .2;
         margin-bottom: 30px;
     }
 
-    .title{
-        font-size: 2.3em;
-        letter-spacing: 2px;
+    .section-title{
         margin-bottom: 30px;
     }
 
@@ -29,6 +32,15 @@
         align-items: center;
         justify-content: center;
 
+        @include breakpoints.tablet{
+            padding-top: 20px;
+        }
+
+        @include breakpoints.mobile{
+            display: block;
+            margin: 0 auto;
+        }
+
         p{
             font-size: 1.1em;
             text-align: left;
@@ -37,6 +49,12 @@
 
             &::first-letter{
                 font-size: 1.5em;
+            }
+
+            @include breakpoints.tablet{
+                padding-top: 10px;
+                max-width: 80%;
+                margin: 0 auto;
             }
         }
 
@@ -48,13 +66,6 @@
                 list-style: none;font-size: px;
                 }
 
-                &:nth-child(2),
-                &:nth-child(3){
-                    border-top: 1px solid variables.$corTextoApagado;
-                    margin-top: 8px;
-                    padding-top: 8px;
-                }
-
                 & .texto-apagado{
                     padding-left: 5px;
                 }
@@ -63,5 +74,14 @@
 
         img{
             height: 300px;
+
+            @include breakpoints.tablet{
+                margin-top: 20px;
+            }
+
+            @include breakpoints.mobile{
+                display: block;
+                margin: 0 auto;
+            }
         }
     }

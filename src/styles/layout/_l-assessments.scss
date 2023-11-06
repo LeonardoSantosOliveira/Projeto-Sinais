@@ -1,9 +1,14 @@
 @use '../modules/variables';
+@use '../modules/breakpoints';
 
 #assessments{
     padding-top: 30px;
     padding-bottom: 50px;
     background-color: #fff;
+
+    @include breakpoints.tablet{
+        padding: 20px;
+    }
 
     .section-title{
         color: #000;
@@ -17,6 +22,10 @@
         gap: 50px;
         justify-content: center;
         align-items: center;
+
+        @include breakpoints.mobile{
+            grid-template-columns: repeat(2, 1fr);
+        }
 
         &-item{
             display: flex;

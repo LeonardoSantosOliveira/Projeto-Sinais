@@ -1,15 +1,29 @@
 @use '../modules/variables';
+@use '../modules/breakpoints';
+
 
 #introducao{
     padding-top: 40px;
     padding-bottom: 40px;
     color: variables.$corTexto;
+
+    @include breakpoints.mobile{
+        padding-bottom: 20px;
+    }
     
     .container{
         display: flex;
         justify-content: space-around;
         align-items: center;
         gap: 20px;
+
+        @include breakpoints.tablet{
+            padding: 35px;
+        }
+
+        @include breakpoints.mobile{
+            flex-direction: column;
+        }
 
         .text-container{
             display: flex;
@@ -26,6 +40,11 @@
                 font-size: 1em;
             }
 
+            @include breakpoints.mobile{
+                max-width: 100%;
+                order: 2;
+            }
+
             p{
                 letter-spacing: 1px;
             }
@@ -39,12 +58,26 @@
                 &:hover{
                     background: red;
                 }
+
+                @include breakpoints.mobile{
+                    width: 100%;
+                    padding-top: 10px;
+                }
             }
         }
 
         .trailer-container{
             max-width: 50%;
             width: 100%;
+
+            @include breakpoints.mobile{
+                max-width: 100%;
+                order: 1;
+            }
+
+            iframe{
+                width: 100%;
+            }
         }
     }
 }

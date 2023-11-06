@@ -1,0 +1,23 @@
+@use '../modules/variables';
+
+footer{
+    position: static;
+    bottom: 0;
+    padding-top: 40px;
+    p{
+        padding: 10px;
+        color: variables.$corTexto;
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    a{
+        text-decoration: none;
+        color: variables.$corTexto;
+        transition: all ease .3s;
+
+        &:hover{
+            color: red;
+        }
+    }
+}

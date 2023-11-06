@@ -1,4 +1,5 @@
 @use '../modules/variables';
+@use '../modules/breakpoints';
 *{
     padding: 0;
     margin: 0;
@@ -9,4 +10,5 @@
 
 body{
     background-color: variables.$bg-color;
+    
 }
